@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LIEOC - Laboratorio de Ingeniería Estructural para Obras Civiles | UTN</title>
+    <title>LIEOC - Laboratorio de Ingeniería Estructural para Obras Civiles | UTN-FRLP</title>
     <style>
         /* --- Estilos Generales --- */
         body {
@@ -15,7 +15,8 @@
             color: #333;
         }
         .container {
-            width: 80%;
+            width: 85%;
+            max-width: 1100px;
             margin: auto;
             overflow: hidden;
             padding: 20px 0;
@@ -23,31 +24,52 @@
         h1, h2, h3 {
             color: #003366; /* Azul UTN oscuro */
         }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+        ul li::before {
+            content: '✓'; /* Checkmark symbol */
+            color: #0056b3;
+            font-weight: bold;
+            display: inline-block;
+            width: 1.2em;
+            margin-left: -1.2em;
+        }
+
 
         /* --- Encabezado --- */
         header {
             background: #003366;
             color: #ffffff;
-            padding: 2rem 0;
+            padding: 3rem 0;
             text-align: center;
             border-bottom: #0056b3 5px solid;
         }
         header h1 {
             margin: 0;
-            font-size: 2.5em;
+            font-size: 2.8em;
             color: #ffffff;
         }
         header .subtitle {
-            font-size: 1.2em;
+            font-size: 1.3em;
             margin-top: 10px;
+            font-weight: 300;
         }
         header .utn-affiliation {
             font-weight: bold;
             color: #b3cde0; /* Azul claro */
+            margin-top: 5px;
         }
         .cta-button {
             display: inline-block;
-            margin-top: 20px;
+            margin-top: 25px;
             padding: 12px 25px;
             background: #ffa500; /* Naranja para contraste */
             color: #003366;
@@ -62,31 +84,35 @@
 
         /* --- Secciones --- */
         section {
-            padding: 40px 0;
+            padding: 40px 20px;
             background: #ffffff;
             margin-bottom: 20px;
             border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
         .section-title {
             text-align: center;
             margin-bottom: 30px;
-            font-size: 2em;
+            font-size: 2.2em;
         }
 
-        /* --- Servicios --- */
-        #services .service-grid {
+        /* --- Grid para Servicios y Equipo --- */
+        .grid-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            text-align: center;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            text-align: left;
         }
-        .service-item {
-            padding: 20px;
+        .grid-item {
+            padding: 25px;
             border: 1px solid #ddd;
             border-radius: 5px;
+            background: #fafafa;
         }
-        .service-item h3 {
+        .grid-item h3 {
             margin-top: 0;
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
         }
 
         /* --- Contacto y Footer --- */
@@ -115,40 +141,76 @@
     <header>
         <div class="container">
             <h1>Laboratorio de Ingeniería Estructural para Obras Civiles (LIEOC)</h1>
-            <p class="subtitle">Compromiso con la innovación y la calidad en la ingeniería civil.</p>
-            <p class="utn-affiliation">Un laboratorio de la Universidad Tecnológica Nacional</p>
-            <a href="#contact" class="cta-button">Contáctenos</a>
+            <p class="subtitle">Un espacio para la investigación, asistencia técnica y vinculación tecnológica en ingeniería estructural.</p>
+            <p class="utn-affiliation">Departamento de Ingeniería Civil | UTN Facultad Regional La Plata</p>
+            <a href="#contact" class="cta-button">Solicitar un Servicio</a>
         </div>
     </header>
 
     <section id="about">
         <div class="container">
-            <h2 class="section-title">Quiénes Somos</h2>
+            <h2 class="section-title">Nuestra Fundamentación</h2>
             <p>
-                El LIEOC es un centro de referencia dedicado a la investigación, desarrollo y prestación de servicios técnicos de alta especialización en el campo de la ingeniería civil. Con el respaldo académico y la infraestructura de la UTN, conectamos el conocimiento teórico con las necesidades prácticas de la industria de la construcción, garantizando resultados precisos, confiables y a la vanguardia de la tecnología.
+                El <strong>LIEOC</strong> nace para institucionalizar la creciente demanda de estudios técnicos y capitalizar la vasta experiencia del Departamento de Ingeniería Civil, consolidando el trabajo desarrollado por el Programa de Extensión en Ingeniería Estructural para Obras Civiles (IEOC). Nos constituimos como un espacio permanente y estructurado para el desarrollo de investigación, asistencia técnica y formación especializada.
+            </p>
+            <p>
+                Contamos con el respaldo y la trayectoria del <strong>LEMAC</strong> (Centro de Investigaciones Viales UTN), articulando sinérgicamente nuestras capacidades gracias a que compartimos plantel docente y profesional. Esta colaboración nos permite optimizar los recursos físicos y el equipamiento de la Facultad, potenciando las capacidades institucionales existentes.
             </p>
         </div>
     </section>
 
+    <section id="objetivos">
+        <div class="container">
+            <h2 class="section-title">Objetivos Generales</h2>
+            <ul>
+                <li><strong>Sistematizar y profundizar</strong> las tareas de inspección, diagnóstico, monitoreo y diseño estructural.</li>
+                <li><strong>Promover la generación</strong> de conocimiento aplicado en el campo de las estructuras civiles.</li>
+                <li><strong>Brindar soporte técnico</strong> a organismos públicos, empresas privadas y organizaciones comunitarias.</li>
+                <li><strong>Formar recursos humanos</strong> capacitados en técnicas avanzadas de Ingeniería estructural.</li>
+                <li><strong>Integrar estudiantes</strong> en procesos reales de aprendizaje, vinculación y transferencia.</li>
+                <li><strong>Generar prácticas de laboratorio</strong> para las cátedras del área de estructuras.</li>
+            </ul>
+        </div>
+    </section>
+    
     <section id="services">
         <div class="container">
-            <h2 class="section-title">Nuestros Servicios</h2>
-            <div class="service-grid">
-                <div class="service-item">
-                    <h3>Análisis de Suelos y Geotecnia</h3>
-                    <p>Realizamos estudios de capacidad portante, clasificación de suelos, ensayos de compactación y más para garantizar la estabilidad de sus cimentaciones.</p>
+            <h2 class="section-title">Líneas de Trabajo</h2>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <h3>Diagnóstico y Evaluación</h3>
+                    <p>Análisis y verificación de estructuras existentes (hormigón armado, metálicas, etc.), evaluación de patologías y diagnóstico estructural de edificaciones y obras civiles.</p>
                 </div>
-                <div class="service-item">
-                    <h3>Ensayo de Materiales</h3>
-                    <p>Sometemos hormigón, acero, polímeros y otros materiales a rigurosas pruebas de compresión, tracción y flexión para certificar su calidad y resistencia.</p>
+                <div class="grid-item">
+                    <h3>Asistencia Técnica</h3>
+                    <p>Soporte especializado a municipios, clubes, escuelas y diversos organismos públicos, adaptando soluciones de ingeniería a las necesidades de la comunidad.</p>
                 </div>
-                <div class="service-item">
-                    <h3>Análisis Estructural y Modelado</h3>
-                    <p>Utilizamos software avanzado para simular el comportamiento de estructuras bajo diversas cargas, optimizando el diseño y asegurando la integridad estructural.</p>
+                <div class="grid-item">
+                    <h3>I+D y Refuerzo Estructural</h3>
+                    <p>Desarrollo, análisis y validación de técnicas innovadoras para el refuerzo y la rehabilitación de estructuras existentes, buscando la eficiencia y sostenibilidad.</p>
                 </div>
-                 <div class="service-item">
-                    <h3>Asesoramiento y Consultoría</h3>
-                    <p>Brindamos apoyo técnico experto para proyectos de construcción, realizamos peritajes y ofrecemos soluciones innovadoras a desafíos complejos de ingeniería.</p>
+                 <div class="grid-item">
+                    <h3>Capacitación y Formación</h3>
+                    <p>Ofrecemos cursos y seminarios de formación continua en normativa estructural vigente y en el uso de herramientas avanzadas de cálculo y modelado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="team">
+        <div class="container">
+            <h2 class="section-title">Estructura y Equipo</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 30px;">
+                El LIEOC funciona en el ámbito del Departamento de Ingeniería Civil y está compuesto por un equipo multidisciplinario que garantiza la excelencia y el rigor técnico en cada proyecto.
+            </p>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <h3>Equipo Técnico</h3>
+                    <p>Integrado por <strong>Docentes-Investigadores</strong> del área de estructuras, <strong>Graduados/as</strong> con notable experiencia profesional y <strong>Estudiantes avanzados/as</strong> de la carrera de Ingeniería Civil.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Áreas Funcionales</h3>
+                    <p>Nuestra organización se divide en áreas especializadas: <strong>Inspección y Diagnóstico</strong>, <strong>Diseño y Verificación</strong>, <strong>Investigación Aplicada</strong> y <strong>Formación y Extensión</strong>.</p>
                 </div>
             </div>
         </div>
@@ -157,17 +219,17 @@
     <section id="contact">
         <div class="container">
             <h2 class="section-title">Póngase en Contacto</h2>
-            <p>Estamos listos para colaborar en su próximo proyecto.</p>
+            <p>Estamos listos para colaborar en su próximo proyecto. Contáctenos para solicitar asesoramiento o servicios de consultoría.</p>
             <p>
-                Email: <a href="mailto:contacto.lieoc@utn.edu.ar">contacto.lieoc@utn.edu.ar</a><br>
-                Teléfono: +54 (XXX) XXX-XXXX<br>
-                Dirección: Calle Falsa 123, Ciudad, Provincia, Argentina.
+                Email: <a href="mailto:ieoc@frlp.utn.edu.ar">ieoc@frlp.utn.edu.ar</a> (ejemplo)<br>
+                Teléfono: +54 (221) XXX-XXXX (ejemplo)<br>
+                Dirección: Av. 60 esq. 124, La Plata, Buenos Aires, Argentina.
             </p>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 LIEOC - Laboratorio de Ingeniería Estructural para Obras Civiles. Todos los derechos reservados.</p>
+        <p>&copy; 2025 LIEOC - Departamento de Ingeniería Civil | UTN Facultad Regional La Plata</p>
     </footer>
 
 </body>
